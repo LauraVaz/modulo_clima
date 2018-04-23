@@ -1,0 +1,7 @@
+name: Módulo clima
+description: Módulo para obtener los datos del clima acorde a una ciudad
+package: Custom
+type: module
+core: 8.x
+version: 1.0
+configure: weather_module.settings

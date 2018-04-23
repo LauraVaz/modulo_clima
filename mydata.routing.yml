@@ -1,0 +1,48 @@
+
+mydata.mydata_controller_display:
+  path: '/'
+  defaults:
+    _controller: '\Drupal\mydata\Controller\HomeController::display'
+    _title: 'Listado de ciudades'
+  requirements:
+    _permission: 'access content'
+
+mydata.mydata_form:
+  path: '/mydata/City'
+  defaults:
+    _form: '\Drupal\mydata\Form\MydataForm'
+    _title: 'Cuidad'
+  requirements:
+    _access: 'TRUE'
+
+mydata.display_table_controller_display:
+  path: '/mydata/cities'
+  defaults:
+    _controller: '\Drupal\mydata\Controller\DisplayTableController::display'
+    _title: 'Listado de ciudades'
+  requirements:
+    _permission: 'access content'
+
+mydata.delete_form:
+  path: '/mydata/City/delete/{cid}'
+  defaults:
+    _form: '\Drupal\mydata\Form\DeleteForm'
+    _title: 'Eliminar'
+  requirements:
+    _access: 'TRUE'
+  
+mydata.config:
+  path: '/admin/config/weather_module'
+  defaults:
+    _title: 'Configuración del Módulo clima'
+    _form: '\Drupal\mydata\Form\ConfigForm'
+  requirements:
+    _permission: 'access administration pages'
+
+mydata.weather_form:
+ path: '/mydata/weather'
+ defaults:
+   _title: 'Clima por ciudad'
+   _form: '\Drupal\mydata\Form\CheckWeatherForm'
+ requirements:
+    _access: 'TRUE'

@@ -1,0 +1,6 @@
+mydata.admin:
+  title: 'Configuración Módulo Clima'
+  description: 'Configura el EndPoint del API OpenWeather en el sitio.'
+  parent: system.admin_config_development
+  route_name: mydata.config
+  weight: 100
